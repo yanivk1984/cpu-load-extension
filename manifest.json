@@ -26,6 +26,6 @@
       }
     ],
     "requested-permissions": {
-		"client": ["run-read-only-commands"]
+		"client": ["get-read-only-session"]
 	}
 }
