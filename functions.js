@@ -39,7 +39,7 @@ function goButtonSpinDisable(element) {
 }
 
 function runScript(scriptName, scriptCommands, runWhenFinished) {
-        smxProxy.sendRequest("request-commit", {"commands" : [`run-script script-name ${scriptName} script ${scriptCommands}`]}, `${runWhenFinished}`);
+        smxProxy.sendRequest("request-commit", {"commands" : [`run-script script-name "${scriptName}" script "${scriptCommands}"`]}, `${runWhenFinished}`);
     }
 
 function getProgress(value) {
