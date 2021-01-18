@@ -14,7 +14,7 @@ function datePickerConfig() {
 
 function runCurrentCpuFetch(element) {
     goButtonSpin(element)
-    runScript("mpstat -P ALL | sed -r 's/\s+/,/g' ; fw ctl affinity -l -r | sed -r 's/:/,/g'")
+    runScript("getCurrentCpu", "mpstat -P ALL | sed -r 's/\s+/,/g' ; fw ctl affinity -l -r | sed -r 's/:/,/g'", "getCurrentCpuCallback")
     goButtonSpinDisable(element)
 }
 
@@ -38,7 +38,7 @@ function goButtonSpinDisable(element) {
     child2.innerText = "Go"
 }
 
-function runScript() {
+function runScript(scriptName, scriptCommands, runWhenFinished) {
         smxProxy.sendRequest("request-commit", {"commands" : [`run-script script-name ${scriptName} script ${scriptCommands}`]}, `${runWhenFinished}`);
     }
 
