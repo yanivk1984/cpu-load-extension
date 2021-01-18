@@ -14,7 +14,7 @@ function datePickerConfig() {
 
 function runCurrentCpuFetch(element) {
     goButtonSpin(element)
-    runScript("getCurrentCpu", "mpstat -P ALL | sed -r 's/\s+/,/g' ; fw ctl affinity -l -r | sed -r 's/:/,/g'", "getCurrentCpuCallback")
+    runScript("getCurrentCpu", "mpstat -P ALL | sed -r 's/\s+/,/g' ; fw ctl affinity -l -r | sed -r 's/:/,/g'", "getProgress")
     goButtonSpinDisable(element)
 }
 
@@ -42,7 +42,7 @@ function runScript(scriptName, scriptCommands, runWhenFinished) {
         smxProxy.sendRequest("request-commit", {"commands" : [`run-script script-name ${scriptName} script ${scriptCommands}`]}, `${runWhenFinished}`);
     }
 
-function onCommit(value) {
+function getProgress(value) {
     if (Header) { document.getElementById('header').innerText = Status }
     if (!isTask) { Taskid = value[0].tasks[0]["task-id"] }
     smxProxy.sendRequest("run-readonly-command", {"command" : "show task","parameters" : {"task-id":""+Taskid+"","details-level":"full"}}, "onReadOnlyCommand");
