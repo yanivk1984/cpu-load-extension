@@ -9,7 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="functions.js" type="text/javascript"></script>
+    <script src="./functions.js" type="text/javascript"></script>
     <title>Check Point CPU Load Extension</title>
 </head>
 <body>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td>Get CPU load from history</td>
-            <td onhover="datePickerConfig()" ><small class="text-muted d-inline">Select Range </small><input type="text" id="rangeDate" class="bg-primary w-25 d-inline border-1" data-input></td>
+            <td ><small class="text-muted d-inline">Select Range </small><input type="text" id="rangeDate" class="bg-primary w-25 d-inline border-1" data-input></td>
             <td><small class="text-muted">Interval </small><input class="ml-1" type="number" value="5" min="1" max="60" step="1"/></td>
             <td><button type="button" onclick="runCpuFetch(this)" class="btn-sm btn-primary"><span ></span><span>Go</span></span></button></td>
           </tr>
