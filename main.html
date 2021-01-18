@@ -27,22 +27,21 @@
             <td>Get Current CPU</td>
             <td><a href="#" class="badge badge-warning">N/A</a></td>
             <td><a href="#" class="badge badge-warning">N/A</a></td>
-            <td><button type="button" onclick="runCpuFetch(this)" class="btn-sm btn-primary"><span ></span><span>Go</span></span></button></td>
+            <td><button type="button" onclick="runCurrentCpuFetch(this)" class="btn-sm btn-primary"><span ></span><span>Go</span></span></button></td>
           </tr>
           <tr>
             <td>Get CPU load over custom timeframe</td>
             <td><a href="#" class="badge badge-warning">N/A</a></td>
             <td><small class="text-muted">Interval </small><input class="ml-1" type="number" value="3" min="2" max="10" step="1"/> <small class="text-muted">Samples </small><input type="number" value="3" min="2" max="30" step="1"/></td>
-            <td><button type="button" onclick="runCpuFetch(this)" class="btn-sm btn-primary"><span ></span><span>Go</span></span></button></td>
+            <td><button type="button" onclick="runCurrentCpuFetch(this)" class="btn-sm btn-primary"><span ></span><span>Go</span></span></button></td>
           </tr>
           <tr>
             <td>Get CPU load from history</td>
             <td ><small class="text-muted d-inline">Select Range </small><input type="text" id="rangeDate" class="bg-primary w-25 d-inline border-1" data-input></td>
             <td><small class="text-muted">Interval </small><input class="ml-1" type="number" value="5" min="1" max="60" step="1"/></td>
-            <td><button type="button" onclick="runCpuFetch(this)" class="btn-sm btn-primary"><span ></span><span>Go</span></span></button></td>
+            <td><button type="button" onclick="runCurrentCpuFetch(this)" class="btn-sm btn-primary"><span ></span><span>Go</span></span></button></td>
           </tr>
         </tbody>
       </table>
-
 </body>
 </html>
