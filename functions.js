@@ -1,5 +1,3 @@
-
-
 function datePickerConfig() {
 
     const myInput = document.querySelector("#rangeDate");
@@ -71,3 +69,39 @@ function csvToJSON(csv) {
     }
     console.log(result);
 }
+
+function console() {
+    console.log = function (message) {
+        if (typeof message == 'object') {
+            var logger = document.getElementById('console');
+            logger.value += (JSON && JSON.stringify ? JSON.stringify(message) : message);
+        } else {
+            var logger = document.getElementById('console');
+            logger.value += message + "\n";
+        }
+    }
+};
+
+function consoleError() {
+    console.error = function (message) {
+        if (typeof message == 'object') {
+            var logger = document.getElementById('console');
+            logger.value += (JSON && JSON.stringify ? JSON.stringify(message) : message);
+        } else {
+            var logger = document.getElementById('console');
+            logger.value += message + "\n";
+        }
+    }
+};
+
+window.addEventListener("error", handleError, true);
+function handleError(evt) {
+    if (evt.message) { // Chrome sometimes provides this
+      console.log("error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename);
+    } else {
+      console.log("error: "+evt.type+" from element: "+(evt.srcElement || evt.target));
+    }
+}
+
+console();
+consoleError;

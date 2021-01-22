@@ -58,3 +58,11 @@ input[type=number] {
     font-weight: bold;
     color: black
 }
+
+#console {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    float: right;
+    margin-right: 10px
+}
