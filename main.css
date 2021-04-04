@@ -7,7 +7,7 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 0;
   right: 0;
   height: 100%;
-  background-color: rgb(200, 87, 133) !important;
+  background-color:white !important;
   border: 2.5px solid black !important;
 }
 
@@ -20,7 +20,7 @@ input[type=number] {
   text-align: center;
   font-family: sans-serif;
   font-size:11px;
-  background-color: rgb(200, 87, 133) !important;
+  background-color: white !important;
   border: 1px solid #9c9c9c !important;
   border-radius: 0.2em;
 }
@@ -29,6 +29,17 @@ input[type=number] {
     width: 75px !important;
     text-align: left;
 }
+
+thead th {
+    background-color:rgb(33, 45, 64) !important;
+    border-color: rgb(33, 45, 64) !important;
+    font-size: 13px;
+}
+
+tr {
+    font-size: 12px;
+}
+
 
 .btn-sm {
     width:100px;
@@ -52,7 +63,7 @@ input[type=number] {
 
 
 .bg-primary {
-    background-color: rgb(200, 87, 133) !important;
+    background-color: white !important;
     font-family: sans-serif;
     font-size:11px;
     font-weight: bold;
@@ -60,9 +71,58 @@ input[type=number] {
 }
 
 #console {
-    width: 500px;
+    width: 95%;
     height: 300px;
     position: relative;
     float: right;
-    margin-right: 10px
+    margin-right: 10px;
+    display: none
 }
+
+.progress {
+    height: 10px;
+    width:50%;
+    
+}
+
+.progress-bar {
+    background-color: rgb(230, 87, 133)
+}
+
+.gw-name {
+    background-color: rgb(33, 45, 64) !important;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+#chart {
+    width: 85%;
+}
+
+#gw_name_head>tr>th {
+    background: #5a6268 !important;
+    border: none;
+}
+
+/* TOASTR BUGFIX */
+#toast-container > div {
+  opacity: 1;
+}
+.toast {
+  font-size: initial !important;
+  border: initial !important;
+  backdrop-filter: blur(0) !important;
+}
+.toast-success {
+  background-color: #51A351 !important;
+}
+.toast-error {
+  background-color: #BD362F !important;
+}
+.toast-info {
+  background-color: #2F96B4 !important;
+}
+.toast-warning {
+  background-color: #F89406 !important;
+}
+/* TOASTR BUGFIX */

@@ -20,12 +20,12 @@
             "details-level": "full",
             "method": "get",
             "trigger-id": "gateways-details-pane",
-            "url": "https://yanivk1984.github.io/cpu-load-extension/main.html"
+            "url": "https://10.0.0.20:4434"
           }
         }
       }
     ],
     "requested-permissions": {
-		"client": ["get-read-only-session"]
+		"client": ["get-read-only-session", "run-read-only-commands"]
 	}
 }

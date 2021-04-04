@@ -1,0 +1,10 @@
+- In case that the onContext is providing undefined, fail the script or wait for it to appear
+- Parse only data that is relevant to the dates selected, do it in the sql command initially
+- Limit one week already in bash even when limiting by date.
+- Add Toasty for notifications regarding dates that is exceeding the threshold and put it on a table + do the same of other fethcing methods
+- cpview folder is different in each version push different command
+- test the tool on different kind of versions
+- Limit the tool to gateways/VSX/SMB/Management/VS depends on which it is working
+- Configure Interval for CPU fetch
+- Add a test for every method in order to check if the value that it got is valid - raise an exception if not and show toasty message
+
